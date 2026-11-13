@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  font-family: 'Vazirmatn', Tahoma, 'Segoe UI', sans-serif;
+  background-color: #050505;
+  color: #fafafa;
+  min-height: 100vh;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-persian;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 rounded-xl bg-gold-500 text-white font-bold transition-all hover:bg-gold-600 hover:shadow-gold-glow active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-xl bg-navy-700 text-gray-200 font-medium border border-navy-500 transition-all hover:bg-navy-600 hover:border-gold-700 active:scale-95 disabled:opacity-50;
+  }
+
+  .btn-danger {
+    @apply px-6 py-3 rounded-xl bg-red-900/40 text-red-300 font-medium border border-red-800/50 transition-all hover:bg-red-900/60 active:scale-95;
+  }
+
+  .btn-ghost {
+    @apply px-4 py-2 rounded-lg text-gray-400 font-medium transition-all hover:text-white hover:bg-navy-700 active:scale-95;
+  }
+
+  .card {
+    @apply bg-navy-800 rounded-2xl border border-navy-600 p-4;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl bg-navy-900 border border-navy-600 text-white placeholder-gray-600 outline-none transition-all focus:border-gold-500 focus:ring-1 focus:ring-gold-500/30;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-l from-gold-400 to-gold-600 bg-clip-text text-transparent;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a0e14;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #65090D;
+}
